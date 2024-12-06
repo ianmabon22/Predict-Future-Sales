@@ -1,6 +1,6 @@
 # Predict-Future-Sales
 
-Basic information (6 pts.): 
+Basic Information: 
 Group Members and Emails:
 Sean Vaghedi seanvaghedi15@gwu.edu
 Yejin Han yhan214h@gwu.edu 
