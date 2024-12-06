@@ -46,11 +46,17 @@ Test Rows: 214,200
 # Model Details:
 
 This model was built referencing two notebooks created by Jagan Gupta https://www.kaggle.com/code/jagangupta/time-series-basics-exploring-traditional-ts/notebook and Ashioya Jotham https://www.kaggle.com/code/ashioyajotham/predict-future-sales#Time-Series-Analysis 
+
 The columns used in the final model are shop_id, item_id, date, and item_cnt_month
+
 The columns used as target in the final model is the variable item_cnt_month. 
+
 The type of model used is an ARIMA (Autoregressive Integrated Moving Average) model. 
+
 The software used to implement the model was Python with pandas, sklearn, statsmodels, seaborn, and numpy libraries. 
+
 The versions used for the modeling softwares included Python 3.12.4, NumPy 1.26.4, Pandas 2.2.2, and Seaborn 0.13.2. 
+
 Hyperparameters include ARIMA model parameters and model periods. 
 
 # Quantitative Analysis:
