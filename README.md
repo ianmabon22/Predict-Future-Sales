@@ -1,5 +1,16 @@
 # Predict-Future-Sales
 
+# Data Dictionary
+
+| **Column Name**     | **Modeling Role** | **Measurement Level** | **Description**                                                                 |
+|----------------------|-------------------|------------------------|---------------------------------------------------------------------------------|
+| `date`              | Input            | Nominal               | The date of the transaction, formatted as DD.MM.YYYY.                          |
+| `date_block_num`    | Input            | Ordinal               | A continuous month identifier, where each number represents a unique month.    |
+| `shop_id`           | Input            | Nominal               | The unique identifier for the shop where the transaction occurred.             |
+| `item_id`           | Input            | Nominal               | The unique identifier for the item being sold.                                 |
+| `item_price`        | Input            | Continuous            | The price of the item at the time of the transaction.                          |
+| `item_cnt_day`      | Target           | Continuous            | The number of items sold on that day (can be negative for returns).            |
+
 Heatmap
 
 <img width="675" alt="Screenshot 2024-12-06 at 4 47 11 PM" src="https://github.com/user-attachments/assets/59680f80-9a15-41bd-a69c-546cbb44d901">
