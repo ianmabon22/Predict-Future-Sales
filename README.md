@@ -23,24 +23,28 @@ Model implementation code (link to Jupyter notebook)
 | `item_price`        | Input            | Continuous            | The price of the item at the time of the transaction.                          |
 | `item_cnt_day`      | Target           | Continuous            | The number of items sold on that day (can be negative for returns).            |
 
-Intended Use: 
+# Intended Use: 
+
 Educational Purposes 
 Intended users: 
 Students and people who are working with Machine Learning 
 Out-of-scope uses 
 Everything that’s not educational use
 
-Training data: 
+# Training Data: 
+
 Source of training data
  The sales_train.csv file is the training dataset. It includes daily sales data from January 2013 to October 2015. This data was downloaded from Kaggle's "Predict Future Sales" competition, created by the user Inversion.
 How training data was divided into training and validation data 
 The test data is split at 7% of the training data.
 
-Number of rows in training and validation data 
+# Number of rows in training and validation data 
+
 Training Rows: 2,348,679
 Test Rows: 214,200
 
-Model details:
+# Model Details:
+
 This model was built referencing two notebooks created by Jagan Gupta https://www.kaggle.com/code/jagangupta/time-series-basics-exploring-traditional-ts/notebook and Ashioya Jotham https://www.kaggle.com/code/ashioyajotham/predict-future-sales#Time-Series-Analysis 
 The columns used in the final model are shop_id, item_id, date, and item_cnt_month
 The columns used as target in the final model is the variable item_cnt_month. 
@@ -49,44 +53,63 @@ The software used to implement the model was Python with pandas, sklearn, statsm
 The versions used for the modeling softwares included Python 3.12.4, NumPy 1.26.4, Pandas 2.2.2, and Seaborn 0.13.2. 
 Hyperparameters include ARIMA model parameters and model periods. 
 
-Quantitative analysis:
+# Quantitative Analysis:
 Metrics to evaluate model performance: Root Mean Squared Error
 Training: 3.048607
 Validation: 2.35458
 Test: 1.17645
+
 The training RMSE was calculated using months 0 to 32 while the validation RMSE was calculated using month 33.
 The test RMSE is very low because the submission file for the Kaggle competition was a 3 month average of each shop/item pair instead of individual predictions with the ARIMA model we created.
+
 The code for individual predictions exists on the model, but it is commented out due to the processing load on our computers’ CPU
+
 If we had better computers, the submission file would reflect the ARIMA model built.
+
 The model predicts total monthly sales up to six months after the last date given in the training data.
+
 The training data was explored using descriptive statistical methods and tested for stationarity.
+
 Once found to be stationary, the predictive ARIMA model was built using stat models.
+
 RMSE was calculated by code created by ChatGPT. 
 
-Ethical considerations:
+# Ethical Considerations:
 
 Potential Negative Impacts:
+
 Math or Software Problems:
+
 Errors in the ARIMA model, like incorrect assumptions of stationarity or parameter selection, can lead to misleading results.
+
 Coding errors in preprocessing, splitting the data, or implementing the ARIMA model may push inaccuracies.	
+
 The computational limitations of hardware may result in suboptimal model performance or inaccurate predictions.
+
 Real-World Risks:
+
 If the model is repurposed for real-world business decisions, incorrect predictions can lead to inventory mismanagement, financial losses, or incorrect/flawed decisions. 
+
 One may misunderstand the limitations of the dataset, such as its restricted scope, leading to general or invalid conclusions. 
+
 The exclusion of test data columns (date, item_price, item_cnt_day) limits the model's ability to understand pricing factors, potentially making its general reliability worse. 
+
 Potential Uncertainties:
 
-Math or Software Problems:
-
 The model’s use of past data assumes that those sales trends will be consistent, which might not be true in a changing, real-world sales environment.
+
 Incorrect evaluation of the model’s stationarity or misinterpretation of validation metrics may indirectly deceive users into believing the model is more accurate than it is.
 
 Real-World Risks:
+
 Different applications, for example, using the model for policy decisions or long-term forecasts could cause users to face unexpected risks.
+
 The potential for bias in the training data might produce unequal predictions that favor certain locations etc..
+
 If users do not fully understand the data’s limitations, they may apply the model to markets or industries where it won’t be suitable, showing its predictive weaknesses.
 
 Describe any unexpected or results:
+
 The model produced followed the downward trend of the sales data, leading to static and low sales compared to a few years earlier which is expected.
 
 # Descriptive Statistics and Forecast
