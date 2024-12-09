@@ -6,11 +6,14 @@ Sean Vaghedi seanvaghedi15@gwu.edu
 Yejin Han yhan214h@gwu.edu 
 Tyler Nguyen tylernguyen@gwu.edu 
 Ian Mabon ianmabon@gwu.edu 
+
 Date: 12/09/2024
+
 Model version: 5
-License (please use an MIT or Apache 2.0 License) 
+
+License
 Apache 2.0 License
-Model implementation code (link to Jupyter notebook) 
+
 
 # Data Dictionary for train_sales.csv
 
