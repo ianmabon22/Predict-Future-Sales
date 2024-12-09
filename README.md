@@ -90,17 +90,13 @@ ARIMA model parameters and model periods.
 The training RMSE was calculated using months 0 to 32 while the validation RMSE was calculated using month 33.
 The test RMSE is very low because the submission file for the Kaggle competition was a 3 month average of each shop/item pair instead of individual predictions with the ARIMA model we created.
 
-The code for individual predictions exists on the model, but it is commented out due to the processing load on our computers’ CPU
-
-If we had better computers, the submission file would reflect the ARIMA model built.
-
-The model predicts total monthly sales up to six months after the last date given in the training data.
-
-The training data was explored using descriptive statistical methods and tested for stationarity.
-
-Once found to be stationary, the predictive ARIMA model was built using stat models.
-
-RMSE was calculated by code created by ChatGPT. 
+> **Note:**  
+> - The code for individual predictions exists on the model, but it is commented out due to the processing load on our computers’ CPU
+> - If we had better computers, the submission file would reflect the ARIMA model built.
+> - The model predicts total monthly sales up to six months after the last date given in the training data.
+> - The training data was explored using descriptive statistical methods and tested for stationarity.
+> - Once found to be stationary, the predictive ARIMA model was built using stat models.
+> - RMSE was calculated by code created by ChatGPT. 
 
 # Ethical Considerations:
 
