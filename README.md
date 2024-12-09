@@ -1,18 +1,20 @@
-# Predict-Future-Sales
+# **Predict-Future-Sales**
 
-Basic Information: 
-Group Members and Emails:
-Sean Vaghedi seanvaghedi15@gwu.edu
-Yejin Han yhan214h@gwu.edu 
-Tyler Nguyen tylernguyen@gwu.edu 
-Ian Mabon ianmabon@gwu.edu 
+## **Basic Information**  
+**Group Members and Emails:**  
+- Sean Vaghedi: seanvaghedi15@gwu.edu  
+- Yejin Han: yhan214h@gwu.edu  
+- Tyler Nguyen: tylernguyen@gwu.edu  
+- Ian Mabon: ianmabon@gwu.edu  
 
-Date: 12/09/2024
+**Date:** 12/09/2024  
 
-Model version: 5
+**Model Version:** 5  
 
-License
-Apache 2.0 License
+**License:**  
+Apache 2.0 License  
+
+---
 
 
 # Data Dictionary for train_sales.csv
@@ -26,52 +28,64 @@ Apache 2.0 License
 | `item_price`        | Input            | Continuous            | The price of the item at the time of the transaction.                          |
 | `item_cnt_day`      | Target           | Continuous            | The number of items sold on that day (can be negative for returns).            |
 
-# Intended Use: 
+## **Intended Use**  
 
-Educational Purposes 
+**Educational Purposes**  
 
-Intended users: 
+### **Intended Users**  
+Students and people who are working with Machine Learning.  
 
-Students and people who are working with Machine Learning 
+### **Out-of-Scope Uses**  
+Everything that’s not educational use.  
 
-Out-of-scope uses:
+---
 
-Everything that’s not educational use
+## **Training Data**
 
-# Training Data: 
+### **Source of Training Data**  
+The `sales_train.csv` file is the training dataset. It includes daily sales data from January 2013 to October 2015. This data was downloaded from Kaggle's "Predict Future Sales" competition, created by the user *Inversion*.  
 
-Source of training data
+The test data is split at 7% of the training data.  
 
-The sales_train.csv file is the training dataset. It includes daily sales data from January 2013 to October 2015. This data was downloaded from Kaggle's "Predict Future Sales" competition, created by the user Inversion.
+### **Number of Rows in Training and Validation Data**  
+- **Training Rows**: 2,348,679  
+- **Test Rows**: 214,200  
 
-The test data is split at 7% of the training data.
+---
 
-# Number of rows in training and validation data 
+## **Model Details**
 
-Training Rows: 2,348,679
-Test Rows: 214,200
+This model was built referencing two notebooks:  
+1. [Jagan Gupta](https://www.kaggle.com/code/jagangupta/time-series-basics-exploring-traditional-ts/notebook)  
+2. [Ashioya Jotham](https://www.kaggle.com/code/ashioyajotham/predict-future-sales#Time-Series-Analysis)  
 
-# Model Details:
+### **Features Used in the Final Model**  
+- Input columns: `shop_id`, `item_id`, `date`, and `item_cnt_month`.  
+- Target column: `item_cnt_month`.  
 
-This model was built referencing two notebooks created by Jagan Gupta https://www.kaggle.com/code/jagangupta/time-series-basics-exploring-traditional-ts/notebook and Ashioya Jotham https://www.kaggle.com/code/ashioyajotham/predict-future-sales#Time-Series-Analysis 
+### **Model Type**  
+- ARIMA (Autoregressive Integrated Moving Average) model.  
 
-The columns used in the final model are shop_id, item_id, date, and item_cnt_month
+### **Software Used**  
+- Python with libraries: `pandas`, `sklearn`, `statsmodels`, `seaborn`, and `numpy`.  
 
-The columns used as target in the final model is the variable item_cnt_month. 
+### **Software Versions**  
+- Python: 3.12.4  
+- NumPy: 1.26.4  
+- Pandas: 2.2.2  
+- Seaborn: 0.13.2  
 
-The type of model used is an ARIMA (Autoregressive Integrated Moving Average) model. 
+### **Hyperparameters**  
+ARIMA model parameters and model periods.  
 
-The software used to implement the model was Python with pandas, sklearn, statsmodels, seaborn, and numpy libraries. 
+---
 
-The versions used for the modeling softwares included Python 3.12.4, NumPy 1.26.4, Pandas 2.2.2, and Seaborn 0.13.2. 
+## **Quantitative Analysis**
 
-Hyperparameters include ARIMA model parameters and model periods. 
-
-# Quantitative Analysis:
-Metrics to evaluate model performance: Root Mean Squared Error
-Training: 3.048607
-Validation: 2.35458
-Test: 1.17645
+### **Metrics to Evaluate Model Performance**  
+- **Training RMSE**: 3.048607  
+- **Validation RMSE**: 2.35458  
+- **Test RMSE**: 1.17645  
 
 The training RMSE was calculated using months 0 to 32 while the validation RMSE was calculated using month 33.
 The test RMSE is very low because the submission file for the Kaggle competition was a 3 month average of each shop/item pair instead of individual predictions with the ARIMA model we created.
