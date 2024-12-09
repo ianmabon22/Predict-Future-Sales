@@ -29,7 +29,7 @@ Apache 2.0 License
 | `item_cnt_day`      | Target           | Continuous            | The number of items sold on that day (can be negative for returns).            |
 
 ## **Intended Use**  
-Educational Purposes**  
+Educational Purposes  
 
 ### **Intended Users**  
 Students and people who are working with Machine Learning.  
