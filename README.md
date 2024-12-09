@@ -44,8 +44,6 @@ Source of training data
 
 The sales_train.csv file is the training dataset. It includes daily sales data from January 2013 to October 2015. This data was downloaded from Kaggle's "Predict Future Sales" competition, created by the user Inversion.
 
-How training data was divided into training and validation data 
-
 The test data is split at 7% of the training data.
 
 # Number of rows in training and validation data 
