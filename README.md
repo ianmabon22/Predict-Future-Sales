@@ -98,43 +98,30 @@ The test RMSE is very low because the submission file for the Kaggle competition
 > - Once found to be stationary, the predictive ARIMA model was built using stat models.
 > - RMSE was calculated by code created by ChatGPT. 
 
-# Ethical Considerations:
+---
 
-Potential Negative Impacts:
+## **Ethical Considerations**
 
-Math or Software Problems:
+### **Potential Negative Impacts**  
+1. **Math or Software Problems:**  
+- Errors in the ARIMA model, like incorrect assumptions of stationarity or parameter selection, can lead to misleading results.
+- Coding errors in preprocessing, splitting the data, or implementing the ARIMA model may push inaccuracies.
+- The computational limitations of hardware may result in suboptimal model performance or inaccurate predictions.
 
-Errors in the ARIMA model, like incorrect assumptions of stationarity or parameter selection, can lead to misleading results.
+2. **Real-World Risks:**
+- If the model is repurposed for real-world business decisions, incorrect predictions can lead to inventory mismanagement, financial losses, or incorrect/flawed decisions.
+- One may misunderstand the limitations of the dataset, such as its restricted scope, leading to general or invalid conclusions.
+- The exclusion of test data columns (date, item_price, item_cnt_day) limits the model's ability to understand pricing factors, potentially making its general reliability worse.
+- Different applications, for example, using the model for policy decisions or long-term forecasts could cause users to face unexpected risks.
+- If users do not fully understand the data’s limitations, they may apply the model to markets or industries where it won’t be suitable, showing its predictive weaknesses.
 
-Coding errors in preprocessing, splitting the data, or implementing the ARIMA model may push inaccuracies.	
+3. **Potential Uncertainties:**
+- The model’s use of past data assumes that those sales trends will be consistent, which might not be true in a changing, real-world sales environment.
+- Incorrect evaluation of the model’s stationarity or misinterpretation of validation metrics may indirectly deceive users into believing the model is more accurate than it is.
+- The potential for bias in the training data might produce unequal predictions that favor certain locations etc.
 
-The computational limitations of hardware may result in suboptimal model performance or inaccurate predictions.
-
-Real-World Risks:
-
-If the model is repurposed for real-world business decisions, incorrect predictions can lead to inventory mismanagement, financial losses, or incorrect/flawed decisions. 
-
-One may misunderstand the limitations of the dataset, such as its restricted scope, leading to general or invalid conclusions. 
-
-The exclusion of test data columns (date, item_price, item_cnt_day) limits the model's ability to understand pricing factors, potentially making its general reliability worse. 
-
-Potential Uncertainties:
-
-The model’s use of past data assumes that those sales trends will be consistent, which might not be true in a changing, real-world sales environment.
-
-Incorrect evaluation of the model’s stationarity or misinterpretation of validation metrics may indirectly deceive users into believing the model is more accurate than it is.
-
-Real-World Risks:
-
-Different applications, for example, using the model for policy decisions or long-term forecasts could cause users to face unexpected risks.
-
-The potential for bias in the training data might produce unequal predictions that favor certain locations etc..
-
-If users do not fully understand the data’s limitations, they may apply the model to markets or industries where it won’t be suitable, showing its predictive weaknesses.
-
-Describe any unexpected or results:
-
-The model produced followed the downward trend of the sales data, leading to static and low sales compared to a few years earlier which is expected.
+4. **Describe any unexpected or results:**
+- The model produced followed the downward trend of the sales data, leading to static and low sales compared to a few years earlier which is expected.
 
 # Descriptive Statistics and Forecast
 
